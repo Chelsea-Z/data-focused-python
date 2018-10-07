@@ -1,4 +1,4 @@
-
+#price, starRating, count by region
 import pandas as pd
 import matplotlib.pyplot as plt
 wine = pd.read_csv('/Users/chizhang/95-888 Python for Data Analytics/WineDotCom.csv', index_col = 0)
@@ -21,3 +21,12 @@ plt.title('Rating vs Price by Region')
 plt.xlabel('Average Price')
 plt.ylabel('Average Rating')
 plt.scatter(x = count_revised['avg_price'], y = count_revised['avg_star'], s = count_revised['count'], c = col, alpha = 0.8)
+plt.show()
+
+#price per year
+year_price = pd.DataFrame(wine.groupby('Year')['Price'].agg(['mean'])).reset_index()
+year_price
+plt.xlabel('Year')
+plt.ylabel('Average price per year')
+plt.title('Price Trends')
+plt.plot(year_price['Year'], year_price['mean'])
