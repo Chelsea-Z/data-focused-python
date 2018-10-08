@@ -21,6 +21,17 @@ plt.title('Rating vs Price by Region')
 plt.xlabel('Average Price')
 plt.ylabel('Average Rating')
 plt.scatter(x = count_revised['avg_price'], y = count_revised['avg_star'], s = count_revised['count'], c = col, alpha = 0.8)
+
+plt.text(41, 4.12, 'Carlifornia')
+plt.text(70, 4.12, 'France')
+plt.text(31, 4.09, 'Italy' )
+plt.text(22.64, 3.93, 'Spain')
+plt.text(32, 3.92, 'Australia')
+plt.text(32.65,4.14, 'Portugal')
+plt.text(26.54, 3.86, 'Chile')
+plt.text(16.83, 4.13, 'New Zealand')
+plt.text(27, 4.22, 'Oregon')
+
 plt.show()
 
 #price per year
