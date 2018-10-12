@@ -5,7 +5,7 @@ Created on Thu Sep 27 11:26:22 2018
 
 @author: liuziqi
 """
-
+### Web Scrapping Code for wine.com
 import bs4
 from bs4 import BeautifulSoup
 import os
